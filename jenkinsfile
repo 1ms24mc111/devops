@@ -12,7 +12,14 @@ pipeline{
     stage('build') {
       steps {
         echo "Building...."
-        sh 'python3 test.py'
+        sh 'javac demo.java'
+      }
+    }
+
+    stage('run') {
+      steps {
+        echo "running...."
+        sh 'java demo'
       }
     }
 
