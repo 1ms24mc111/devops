@@ -12,7 +12,7 @@ tools{
         }
     }
 
-      stages {
+      
         stage('Build') {
             steps {
                 sh 'javac Demo.java'
@@ -23,7 +23,7 @@ tools{
                 sh 'java Demo'
             }
         }
-    }
+    
    
 
     stage('Test') {
