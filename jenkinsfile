@@ -1,16 +1,11 @@
-pipeline{
-  agent any
-
-
-  stages{
-
-    stage('checkout'){
-        steps {
-            git branch: 'main', url: 'https://github.com/1ms24mc111/devops'
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/1ms24mc111/devops.git'
+            }
         }
-    }
-
-      
         stage('Build') {
             steps {
                 sh 'javac Demo.java'
@@ -21,16 +16,5 @@ pipeline{
                 sh 'java Demo'
             }
         }
-    
-   
-
-    stage('Test') {
-      steps {
-        echo "Testing...."
-      }
     }
-
-  }
-
-
 }
