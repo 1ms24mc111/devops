@@ -16,12 +16,7 @@ pipeline{
       }
     }
 
-    stage('run') {
-      steps {
-        echo "running...."
-        sh 'java demo'
-      }
-    }
+   
 
     stage('Test') {
       steps {
