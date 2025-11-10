@@ -9,13 +9,16 @@ pipeline{
         }
     }
 
-    stage('build') {
-      steps {
-        echo "Building...."
-        sh 'javac demo.java'
-      }
-    }
-
+     stage('Build Java') {
+            steps {
+                sh 'javac demo.java'
+            }
+        }
+        stage('Run Java') {
+            steps {
+                sh 'java demo'
+            }
+        }
    
 
     stage('Test') {
