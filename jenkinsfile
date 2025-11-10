@@ -12,16 +12,18 @@ tools{
         }
     }
 
-     stage('Build Java') {
+      stages {
+        stage('Build') {
             steps {
                 sh 'javac Demo.java'
             }
         }
-        stage('Run Java') {
+        stage('Run') {
             steps {
                 sh 'java Demo'
             }
         }
+    }
    
 
     stage('Test') {
