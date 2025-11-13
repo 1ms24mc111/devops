@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+
+  stages{
+        stage('checkout')
+        {
+          steps{
+                git branch: 'main', url:'https://github.com/1ms24mc111/devops.git'
+            }
+        }
+
+
+        stage('build and Run')
+        {
+          steps{
+                sh 'python3 test.py'
+            }
+        }
+  }
+}
+
+
+
