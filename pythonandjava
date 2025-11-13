@@ -15,6 +15,7 @@ pipeline {
 
         stage('Build Java') {
             steps {
+                echo 'Building'
                 sh 'javac Demo.java'
             }
         }
